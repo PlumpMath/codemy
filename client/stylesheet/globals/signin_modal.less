@@ -1,0 +1,160 @@
+@import 'variables.less';
+
+.modal-dialog.signin-modal {
+	
+	width: 400px;
+	left: 50%;
+	margin-left: -200px;
+	.modal-content {
+		.modal-header {
+			text-align: center;
+			border-bottom: 0px;
+			padding-bottom: 0px;
+			margin-bottom: 20px;
+		}
+		.modal-body{
+			text-align: center;
+			padding-top: 0px;
+				ul.nav.nav-tabs {
+					
+					width: 85%;
+					margin: 0 7.5%;
+					font-weight: light;
+					li.active {
+						a {
+							// border-color: @gray-lighter;
+							// border-bottom: 0px;
+						}
+					}
+				}
+
+				.input-form{
+				margin-top: 15px;
+				margin-bottom: 10px;
+					.input-group {
+						width: 85%;
+						margin: 0 7.5%;
+
+
+						input {
+							border-color: @gray-lighter;
+							box-shadow: none;
+							height:51px;
+							&:focus{
+								outline: none;
+								box-shadow: none;
+								border-color: @gray-lighter;
+								drop-shadow: none;
+							}
+							&.focus{
+								outline: none;
+							}
+						}
+
+						span {
+							border-color: @gray-lighter;
+							font-weight: light;
+							color: @gray-light;
+						}
+
+						#signin-user, #register-user {
+							border-bottom: 0px;
+							border-bottom-right-radius: 0px;
+						}
+
+						#signin-password, #register-password-confirm {
+							border-top-right-radius: 0px;
+						}
+
+						#register-email, #register-password{
+							border-radius: 0px;
+							border-bottom: 0px;
+						}
+
+						#basic-addon1{
+							background: @gray-secondary;
+							border-bottom-left-radius: 0px;
+							width: 115px;
+							border-bottom:0px;
+							height: 50px;
+							font-size: 1.1em;
+						}
+
+						#basic-addon0{
+							background: @gray-secondary;
+							border-radius: 0px;
+							width: 115px;
+							border-bottom:0px;
+							height: 50px;
+							font-size: 1.1em;
+						}
+
+						#basic-addon2 {
+							background: @gray-secondary;
+							border-top-left-radius: 0px;
+							width: 115px;
+							height: 50px;
+							font-size: 1.1em;
+						}
+					}
+				}
+			
+				.btn-success{
+					width: 85%;
+					height:40px;
+					font-size: 1.2em;
+				}
+
+				p {
+					margin-top: 20px;
+					margin-bottom: 20px;
+					color: gray;
+				}
+
+				.btn-social{
+					border:none;
+					padding-left: 37px;
+					padding-right: 15px;
+					i {
+						border-right: 0px;
+					}
+				}
+
+				.btn-sns{
+					color:@white;
+					background: #3b5998;
+					width: 270px;
+					text-align: center;
+					height: 40px;
+					border:none;
+					border-radius: 20px;
+				}
+
+				// i {
+				// 	border-right: 0px;
+				// 	line-height: 40px;
+				// }
+			
+		}	
+		.modal-footer{
+			border-top: 0px;
+		}
+	}
+}
+ 
+
+
+ @media screen and (max-width: 320px) {
+    .modal-dialog.signin-modal {
+      width:320px;
+      position: absolute;
+      left: 50%;
+      //now you must set a margin left under zero - value is a half width your window
+      margin-left: -160px !important;
+      // this same situation is with height - example
+
+    }
+ }
+
+
+

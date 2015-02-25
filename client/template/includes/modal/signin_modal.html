@@ -3,35 +3,101 @@
 <!-- Modal -->
 <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
-	<div class="modal-dialog">
-		<form>
+	<div class="modal-dialog signin-modal">
+		
 			<div class="modal-content">
 				<div class="modal-header">
-					<h3>CODEMY</h3>
-					<p>로그인하세요</p>
+					<h2>CODEMY</h2>
 				</div><!--End modal-header-->
 				
 				<div class="modal-body">
-					<span class="input input--isao">
-						<input class="input__field input__field--isao" name="signinUser" type="text" id="input-38" />
-						<label class="input__label input__label--isao" for="input-38" data-content="아이디/이메일">
-							<span class="input__label-content input__label-content--isao">아이디/이메일</span>
-						</label>
-					</span>
+					 <ul class="nav nav-tabs nav-justified">
+						<li class="active" id="signinTab"><a href="#pane1" data-toggle="tab">로그인</a></li>
+						<li><a href="#pane2" data-toggle="tab" id="registerTab">회원가입</a></li>
+					</ul>
 
-					<span class="input input--isao">
-						<input class="input__field input__field--isao" name="signinUser" type="password" id="input-38" />
-						<label class="input__label input__label--isao" for="input-38" data-content="비밀번호">
-							<span class="input__label-content input__label-content--isao">비밀번호</span>
-						</label>
-					</span>
+					<div class="tab-content">
+						<div id="pane1" class="tab-pane active">
+						<form id ="signinForm">
+							
+							<div class="input-form">
+								<div class="input-group">
+									<span class="input-group-addon" id="basic-addon1">아이디/이메일</span>
+									<input id="signin-user" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+								</div>
+
+								<div class="input-group">
+									<span class="input-group-addon" id="basic-addon2">비밀번호</span>
+									<input id="signin-password" type="password" class="form-control" placeholder="" aria-describedby="basic-addon1">
+								</div>
+							</div>
+
+							<div class="row-fluid">
+								<button type="button" class="btn btn-success btn-rounded">로그인!</button>
+							</div>
+
+							<div class="row-fluid">
+								<p>아니면 아래 중 선택하세요</p>
+							</div>
+
+							<div class="row-fluid">
+								<!--image of social buttons-->
+								<!-- <img class="img-social-login" src="/img/fblogo.png">
+								<img class="img-social-login" src="/img/fblogo.png"> -->
+								<button class="btn btn-social btn-facebook" id="facebook-login">
+								<i class="fa fa-facebook"></i>
+								페이스북 연동
+								</button>
+								<button class="btn btn-social btn-google-plus" id="facebook-login">
+								<i class="fa fa-google-plus"></i>
+								구글 연동
+								</button>
+							</div>
+						</form>
+						</div> <!--End Sign In Pane-->
+
+						<div id="pane2" class="tab-pane">
+						<form id="registerForm">
+						
+							<div class="input-form">
+								<div class="input-group">
+									<span class="input-group-addon" id="basic-addon1">아이디</span>
+									<input id="register-user" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+								</div>
+
+								<div class="input-group">
+									<span class="input-group-addon" id="basic-addon0">이메일</span>
+									<input id="register-email" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+								</div>
+
+								<div class="input-group">
+									<span class="input-group-addon" id="basic-addon0">비밀번호</span>
+									<input id="register-password" type="password" class="form-control" placeholder="" aria-describedby="basic-addon1">
+								</div>
+
+								<div class="input-group">
+									<span class="input-group-addon" id="basic-addon2">비밀번호 확인</span>
+									<input id="register-password-confirm" type="password" class="form-control" placeholder="" aria-describedby="basic-addon1">
+								</div>
+							</div>
+
+							<div class="row-fluid">
+								<button type="button" class="btn btn-success btn-rounded">완료!</button>
+							</div>
+
+						</form>
+						</div> <!--End Register Pane-->
+				
+					</div><!-- /.tab-content -->
+
+					
 
 				</div><!--End modal-body-->
 				
 				<div class="modal-footer">
 				</div><!--End modal-footer-->
+
 			</div><!--End modal-content-->
-		</form>
 	</div><!--End modal-dialog-->
 
 </div><!--End modal fade-->

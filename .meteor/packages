@@ -12,3 +12,5 @@ less
 twbs:bootstrap
 accounts-base
 accounts-password
+tanis:bootstrap-social
+fortawesome:fontawesome
