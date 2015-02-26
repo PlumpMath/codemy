@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+	.hideMobile {
+		display:none;
+		visibility: hidden;
+	}
+}
+

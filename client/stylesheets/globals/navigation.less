@@ -1,0 +1,123 @@
+@import 'variables.less';
+
+
+//Navigation Inner Top :navbar2
+.navbar-default { 
+  margin-bottom: 0px;
+  height: 45px;
+  width: 100%;
+  position: relative;
+  background:@brand-primary;
+  margin-bottom: 20px; // Edit with site-menu @sidebar.less 
+
+  ul {
+    padding:0px;
+  }
+  
+  li {
+    display: inline;
+    list-style: none;
+  }
+}
+
+/*line-height, align setting*/
+.navbar-header {
+  line-height:45px;
+  vertical-align: middle;
+}
+
+/*Navbar-default link style*/
+a.navbar-button {
+  display:inline-block;
+  text-align: center;
+  color: lighten(@brand-primary, 20%);
+  font-weight:regular;
+  font-size:  1.1em;
+  line-height: 40px;
+  height:40px;
+  min-width: 40px;
+  padding: 0 5px 0 5px;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+//   i {
+//     font-size: 15px;
+//     vertical-align: middle;
+//   }
+// }
+
+a.navbar-button:hover {
+  color:@white;
+  text-decoration: none;
+}
+
+/* Margins for left side nav */
+.pull-left li:first-child {
+  margin: 0 0 0 5px;
+}
+
+/* Margins for right side nav */
+.pull-right a.navbar-button:first-child {
+  margin: 0 5px 0 0;
+}
+
+
+//Navigation Side Tab : navTab
+
+/******SIDE TABS*****/
+
+ul#nav-tabs {
+  list-style: none;
+  padding:0px;
+  margin:0px;
+  position: fixed;
+  right: 0px;
+  top: 150px;
+  width: 40px;
+  z-index: 9;
+  background-color: @brand-primary;
+  display:block;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+
+ul#nav-tabs > li > a {
+  vertical-align: middle;
+  color: lighten(@brand-primary, 20%);
+  line-height: 40px;
+  font-size:20px;
+  margin-bottom: 10px;
+  padding: 0;
+  opacity:0.9;
+}
+
+
+
+ul#nav-tabs >li > a:hover {
+  text-decoration: none;
+  font-size:20px;
+  color:@white;
+  opacity: 1;
+}
+
+// #return-to-top{
+//   display:none;
+// }
+
+#return-to-top i {
+  position:relative;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover i {
+    top: -5px;
+}
+
+#go-to-submit.active{
+  color:white;
+}

@@ -1,0 +1,12 @@
+<template name="searchItem">
+	<div class="col-xs-12 col-sm-6 col-md-4 col-md-3 ">
+	<div class="searchItem">
+		<h3 id="linkToPost"><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
+			<p>
+				 <span class="metadata"><span><strong>{{author}}</strong></span>  {{pluralize votes "Vote"}},
+				<a href="{{pathFor 'postPage'}}"></a>
+				{{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}</span> 
+			</p>
+	</div>
+	</div>
+</template>

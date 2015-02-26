@@ -1,0 +1,108 @@
+<template name="postPage">
+
+	<div class="container">
+	<div class="row">
+
+		<!--Col MD 9 (Actual Post Page)-->
+		<div class="col-sm-9">
+			<div class="main-container" style="border-bottom-right-radius:0px; border-bottom-left-radius:0px; padding: 20px;">
+				
+				<!--Post Page Header-->
+				<div class = "row">
+					<div class="post-header">
+						<p>
+	       					<span class="metadata"><span><strong>{{author}}</strong></span>  {{pluralize votes "Vote"}}, 
+	       					{{#if currentUser}}
+								<button class="btn btn-sm upvote {{upvotedClass}}" id="upBtn"><!-- <i class="fa fa-chevron-up"></i> --><i class="li_like"></i></button>
+								<button class="btn btn-sm downvote {{downvotedClass}} flip" id="downBtn"><!-- <i class="fa fa-chevron-down"></i> --><i class="li_like"></i></button>
+							{{else}}
+								<button class="btn btn-sm upvote" disabled><i class="li_like"></i></button>
+								<button class="btn btn-sm downvote flip" disabled><!-- <i class="fa fa-chevron-down"></i> --><i class="li_like"></i></button>
+							{{/if}}
+	        					{{#if ownPost}}
+	        					<ul class="editRow">
+	        					<li><a href="{{pathFor 'postEdit'}}">Edit</a></li>
+	        					<li><a class="delete"><i class="fa fa-trash-o"></i></a></li>
+	        					</ul>
+	        					{{/if}}			
+	        					</span> 	        		
+				      		</p>
+						<h3>{{title}}</h3>
+					</div>
+				</div>
+				
+				<!--Post Content-->
+				<div class="row">
+					<div class="post-content" style="min-height:300px;">
+						{{#markdown}}{{content}}{{/markdown}}	
+					</div>
+				</div>
+		
+		
+				<ul class="comments">
+					{{#each comments}}
+						{{> commentItem}}
+					{{/each}}
+				</ul>
+			</div>  <!--End Main Container-->
+	
+			{{#if currentUser}}
+				{{> commentSubmit}}
+			{{else}}
+				<div class="container-footer">
+					<p>Please <a href="#" data-target="#signinModal" data-toggle="modal">sign-in</a> to leave a comment. <a href="#" data-target="#signupModal" data-toggle="modal">Sign-up</a> now</p>
+				</div>
+			{{/if}}	
+		</div> <!--END Col MD 9-->
+
+		<!--Col MD 3 (ASIDE)-->
+		<div class="col-sm-3 aside">
+		
+			<div class="row hideMobile">
+				<div class="col-xs-12">
+					<div class="main-container profile-card">
+						<div class="profile-aside">
+							<img class="img-responsive img-circle" src="/img/blank_avatar.png">
+							<p>Question by..</p>
+							<strong>{{author}}</strong>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row hideMobile">
+				<div class="col-xs-12" style="margin-top:20px;">
+				<div class="main-container">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+				</div>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+	</div> <!--End Container-->
+
+	
+	{{#each answers}}
+      		{{> answerItem}}
+    	{{/each}}
+		
+	
+	{{#if currentUser}}
+		{{> answerSubmit}}
+	{{else}}
+	
+	<div class="container">
+		<div class="col-sm-12">
+			<div class="main-container" id="loginWarning" style="margin-top:20px;">
+				<h4>Please <a href="#" data-target="#signinModal" data-toggle="modal">sign-in</a> to leave an answer. <a href="#" data-target="#signupModal" data-toggle="modal">Sign-up</a> now</h4>
+			</div>
+		</div>
+	</div>
+	
+	{{/if}}
+	
+</template>

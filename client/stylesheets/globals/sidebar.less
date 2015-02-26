@@ -1,0 +1,141 @@
+@import "variables.less";
+
+
+.img-circle.avatar {
+	display:inline-block;
+	width:40%;
+	margin-top: 45px;
+//  border: solid 2px white;
+	-webkit-filter: drop-shadow(0px 5px 0px darken(@brand-primary, 10%));
+	filter: drop-shadow(0px 2px 5px darken(@brand-primary, 10%));
+}
+
+.overlay-black{
+
+			position:absolute;
+			display:hidden;
+			visibility: none;
+			
+			top:-10;
+			bottom: 0;
+			width: 0%;
+			height: 0%;
+			background: rgba(0,0,0,0);
+			opacity:0;
+			transition: opacity .3s ease-in-out;
+			-moz-transition: opacity .3s ease-in-out;
+			-webkit-transition: opacity 300ms ease-in-out;
+		}
+
+#site-wrapper.show-nav #site-canvas {
+-webkit-transform: translateX(300px);
+transform: translateX(300px);
+//transition: all .8  ease all;
+	
+			.overlay-black{
+			position:absolute;
+			display:block;
+			z-index: 99;
+			top:-10;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.5);
+			opacity:0.5;
+			transition: opacity .3s ease-in-out;
+			-moz-transition: opacity .3s ease-in-out;
+			-webkit-transition: opacity 300ms ease-in-out;
+		}
+
+
+}
+
+#site-menu {
+//margin-top: -20px; //Compensate Margin diference
+width: 300px;
+height: 100% !important;
+position: absolute;
+top: 0;
+left: -300px;
+background: @brand-secondary;//darken(@brand-primary, 10%);
+padding: 0px;
+padding-top: -10px;
+z-index: 900;
+	.container-fluid {
+
+		padding: 30px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 45px;
+	}
+	
+		ul {
+			margin-top: 20px;
+			list-style: none;
+			width: 100%;
+			
+			padding: 0px;
+			li {
+				//width: 300px;
+				height: 50px;
+				padding-left: 30px;
+				//text-align: center;	
+				font-size: 1.1em;
+				border-top: 1px solid darken(@brand-secondary, 5%);
+				&:last-child {
+					border-bottom: 1px solid darken(@brand-secondary, 5%);
+				}
+				&:hover {
+					background: darken(@brand-secondary, 5%);
+				}
+				i{
+					vertical-align: middle;
+					font-size: 1.5em;
+				}
+				a{
+					display: block;
+					width: 100%;
+					height: 100%;
+					line-height: 50px;
+					color: @white;
+					vertical-align: middle;
+					font-weight: 600;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	
+}
+
+
+
+
+#site-canvas {
+width: 100%;
+margin-top: -20px;
+padding-top: 20px;
+min-height: 100%;
+position: relative;
+-webkit-transform: translateX(0);
+transform: translateX(0);
+-webkit-transition: .5s ease all;
+transition: .5s ease all;
+background: @grayLightest;
+padding:none; /* Temp: Just spacing. 5% 0 */
+
+	
+}
+
+#site-wrapper {
+position: relative;
+width: 100%;
+padding:0px;
+height: 2000px;  /*Temp: Simulates a tall page. */
+overflow-x: hidden; /*Hide X from main*/
+background: @brand-secondary;
+}
+

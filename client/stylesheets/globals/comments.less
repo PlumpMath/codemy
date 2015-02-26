@@ -1,0 +1,175 @@
+@import 'variables.less';
+// @import url(http://fonts.googleapis.com/css?family=Raleway:200,400,700,800);
+//@import url(http://fonts.googleapis.com/css?family=Lato:200,400,700,800);
+
+.grid-block, .main, .post, .comments li, .comment-form {
+	background: none;
+	padding: 10px;
+	//margin-bottom: 10px;
+	background: @white;
+
+}
+
+body {
+	background: @grayLightest;
+	color: @brand-text;
+	// font-weight: 400;
+
+	font-family: 'Lato', '굴림', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-backface-visibility: hidden;
+}
+
+
+.jumbotron {
+
+}
+
+#spinner {
+	height: 300px; }
+
+
+
+//COMMENTS
+.comments {
+	list-style-type: none;
+	margin: 0; 
+	margin-top: 10px;
+	padding: 20px;
+	//border: 1px solid @grayLightest;
+	//border-bottom: 1px solid darken(@brand-secondary, 10%);
+}
+
+.comments li {
+	border-top: 1px solid @grayLightest;
+
+
+
+	&:last-child{
+		border-bottom: 1px solid @grayLightest;
+	}
+			
+}
+	
+.media-body {
+	color: @brand-secondary;
+	font-weight: 400;	
+}
+
+h4.media-heading {
+		color: @brand-primary;
+		font-weight: 800;
+		span.date {
+			color: @brand-third;
+		}
+}
+
+.comments li h4 {
+font-size: 16px;
+margin: 0; }
+.comments li h4 .date {
+font-size: 12px;
+font-weight: normal; }
+.comments li h4 a {
+font-size: 12px; }
+.comments li p:last-child {
+margin-bottom: 0; }
+
+.eachNotification {
+	list-style: none;
+	
+	//a{
+	//	color: @brand-light;
+	//	font-variant: small-caps;;
+	//}
+//
+	//a:hover{
+	//	color:@brand-light-hover;
+	//	text-decoration: none;
+	//}
+}
+
+.dropdown-menu {
+
+	position: absolute;
+	left: 50px;
+	top: 50px;
+
+}
+
+.dropdown{
+	a:hover{
+		text-decoration: none;
+	}
+	a:active{
+		text-decoration:none;
+	}
+}
+
+
+.posts .spinner-container{
+	position: relative;
+	height: 100px;
+}
+
+.jumbotron{
+	text-align: center;
+}
+.jumbotron h2{
+	font-size: 60px;
+	font-weight: 100;
+}
+
+@-webkit-keyframes fadeOut {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	90% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	90% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+.errors{
+	position: fixed;
+	z-index: 10000;
+	padding: 10px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	pointer-events: none;
+}
+.alert {
+	// animation: fadeOut 2700ms ease-in 0s 1 forwards;
+	// -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+	// -moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+	width: 250px;
+	float: right;
+	clear: both;
+	margin-bottom: 5px;
+	pointer-events: auto;
+	border-radius:0px;
+	font-weight:bolder;
+	.close{
+		opacity:0.3; 
+		text-shadow:none; 
+	}
+}
+
+.alert-success {
+		color:@white;
+		background:@brand-success;
+		border: 1px solid darken(@brand-success, 10%);
+}
+
+.alert-danger {
+		color:@white;
+		background: @brand-warning;
+		border: 1px solid darken(@brand-warning, 10%);
+}
+

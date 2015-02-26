@@ -1,0 +1,125 @@
+@import 'variables';
+
+#signinModal {
+	.modal-backdrop.fade.in {
+		opacity: 0.2;
+		filter: alpha(opacity=20);
+	}
+}
+
+.modal-dialog.account,
+.modal-dialog {
+	max-width:600px;
+	height:400px;
+	
+	//Centering Modal (position:50%, margin of Position= -width/2)
+	left:50%;
+	margin-left: -300px;
+	top: 5%;
+	
+
+	.modal-content{
+		//background-color: @brand-primary;
+		box-shadow: none;
+		//border-radius: 10px !important;
+		// border: 3px solid @brand-dark;
+		// -webkit-filter: drop-shadow(0px 5px 0px @brand-dark);
+		//	filter: drop-shadow(0px 5px 0px @brand-dark);
+
+		.modal-header{
+			
+			color: @brand-primary;
+			//border-top-left-radius: 10px;
+			//border-top-right-radius: 10px;
+			border:none;
+			text-align: center;
+			h4.modal-title{
+				font-size: 2.2em;
+			}
+			.close{ 
+				display:none; //DELETE THIS ROW TO UNHIDE!!!
+				color:@brand-light; 
+				opacity:1; 
+				text-shadow:none; 
+				position:absolute;
+				right: 20px;
+			}
+			.close:hover{color:@brand-light-hover;}
+		}
+
+		.modal-body{
+			background:@white;
+			//border:none;
+			text-align: center;
+
+			#socialBlock{
+				margin-top: -15px; //compensate white space 
+				margin-bottom: -15px;
+				padding-top: 15px; //Gutter from compensation
+				height: 75px;
+				//background:@graySecondary;
+			}
+
+			p {
+				text-transform: uppercase;
+				font-weight: bold;
+				color:@brand-light;
+			}
+			p a {
+				color:@brand-light
+			}
+			p a:hover {
+				color:@brand-light-hover;
+				text-decoration: none;
+			}
+			textarea#user_info {
+				width: 100%;
+				min-height: 200px;
+				border: 1px solid @brand-third;
+				padding: 10px;
+				&:focus {
+					outline:none;
+					border: 1px solid @brand-primary;
+				}
+			}
+		}
+
+		.modal-footer{
+			///background:@brand-primary;
+			border:none;
+		}
+
+	}
+
+}
+
+ @media screen and (max-width: 768px) {
+    .modal-dialog {
+      width:350px;
+      position: absolute;
+      left: 50%;
+      //now you must set a margin left under zero - value is a half width your window
+      margin-left: -175px !important;
+      // this same situation is with height - example
+
+    }
+ }
+
+  @media screen and (max-width: 375px) {
+    .modal-dialog {
+      width:350px;
+      position: absolute;
+      left: 50%;
+      //now you must set a margin left under zero - value is a half width your window
+      margin-left: -175px !important;
+      // this same situation is with height - example
+
+    }
+  }
+    
+  @media screen and (max-width: 320px) {
+    .modal-dialog {
+      width:300px;
+      margin-left: -150px !important;
+    }
+  }

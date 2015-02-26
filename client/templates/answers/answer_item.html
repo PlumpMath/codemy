@@ -1,0 +1,59 @@
+<template name="answerItem">
+
+	<div class="container">
+	<div class="col-md-12">
+	<div class="main-container" style="margin-top: 20px; border-bottom-right-radius:0px; border-bottom-left-radius:0px; padding: 20px;">
+
+		<div class = "row" style="height:100px;">
+			<div class="post-content">
+			<p>
+	       		
+	        		{{#if ownPost}}
+	        		<ul class="editRow">
+	        			<li><a href="{{pathFor 'postEdit'}}">Edit</a></li>
+	        			<li><a class="delete"><i class="li_trash"></i></a></li>
+	        		</ul>
+	        		{{/if}}
+	        		<h3><strong>{{author}}</strong>'s Answer </h3>
+	        		<a href="{{pathFor 'postPage'}}"></a>
+	      		</p>
+			
+			</div>
+		</div>
+		
+		<div class="row-fluid">
+			<div class="post" style="word-wrap: break-word; margin:0 auto; ">
+			{{#markdown}}{{content}}{{/markdown}}
+			</div>
+		</div>
+	
+
+
+		<ul class="comments">
+		{{#each comments}}
+			{{> commentItem}}
+		{{/each}}
+		</ul>
+</div>
+
+		{{#if currentUser}}
+			{{> answerComment}}
+		{{else}}
+
+
+	
+		<div class="container-footer">
+			<p>Please <a href="#" data-target="#signinModal" data-toggle="modal">sign-in</a> to leave a comment. <a href="#" data-target="#signupModal" data-toggle="modal">Sign-up</a> now</p>
+		</div>
+	
+		{{/if}}
+		
+</div>
+	</div>		
+
+
+		
+	
+
+</template>
+

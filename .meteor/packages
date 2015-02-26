@@ -1,16 +1,34 @@
 # Meteor packages used by this project, one per line.
-# Check this file (and the other files in this directory) into your repository.
 #
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
-autopublish
-insecure
-iron:router
+standard-app-packages
+mizzao:bootstrap-3
+underscore
+iron:router@1.0.0-rc.1
+sacha:spin
+audit-argument-checks
+
 less
-twbs:bootstrap
+fortawesome:fontawesome
+jquery
+raix:handlebar-helpers
+copleykj:jquery-autosize
+# pcel:loading
+stylus
+simple:highlight.js
+markdown
+showdown
 accounts-base
 accounts-password
+matteodem:easy-search
+grigio:overlay
 tanis:bootstrap-social
-fortawesome:fontawesome
+accounts-facebook
+service-configuration
+jquery-waypoints
+percolate:momentum-iron-router
+jonblum:jquery-cropper
+afruth:chapp
+coffeescript

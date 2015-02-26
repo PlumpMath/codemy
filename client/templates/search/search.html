@@ -1,0 +1,41 @@
+<template name = "search">
+<div class="overlay">
+
+
+		<div class="jumbotron">
+			<h4 class="smallcaps">search for questions</h4>
+			  <div class="search">
+				  <p>	  
+				  {{> esInput index="posts" id="search" placeholder="..." convertnumber=true}}
+				  </p>
+			  </div>
+		</div>
+
+	<div class="searchList">
+	<div class="row">
+        {{#esEach index="posts" id="search"}}
+            
+            {{> searchItem}}
+            
+        {{/esEach}}
+    </div>
+
+        {{#ifEsHasNoResults index="posts" id="search" logic="OR" }}
+            <div class="no-results">No results found!
+            </div>
+        {{/ifEsHasNoResults}}
+        <div class="row" id="loadmore">
+        {{ > esLoadMoreButton index="posts" id="search" class="btn btn-block btn-search"}}
+        {{! > esPagination index="posts" id="search" }}
+        </div>
+	</div>		
+
+
+
+	<a class="js-overlay-close overlay-close1">✕</a>
+
+	<p class="exitLabel">[ESC]</p>
+
+</div>
+
+</template>

@@ -1,0 +1,76 @@
+@import 'variables.less';
+
+.mypage-container {
+	height: 400px;
+	h3.myposts {
+		padding-bottom: 10px;
+		border-bottom: 1px solid @grayLightest;
+	}
+}
+
+.mypage-container.profile-container {
+	p.myinfo {
+		height: 250px;
+	}
+}
+
+@media (max-width: 768px) {
+	.mypage-container.profile-container {
+		text-align: center;
+		img {
+			margin: 0 auto;
+		}
+		p.myinfo{
+			height: 120px;
+		}
+	}
+}
+
+.myposts-container {
+	height: 820px;
+
+	h4.nomoreposts{
+		border-top: 1px solid @grayLightest;
+		margin-top: 0px;
+		padding-top: 20px;
+	}
+
+	.pager{
+		
+		.next a,
+		.previous a {
+			border: 1px solid @grayLightest;
+			&:hover {
+				
+			}
+		}
+
+		li.next {
+			position: absolute;
+			bottom: 25px;
+			right: 40px;
+		}
+		li.previous {
+			position: absolute;
+			bottom: 25px;
+			left: 40px;
+		}
+	}
+
+	h3.myposts{
+		margin-right: 10px;
+		display:inline-block;
+	}
+	#newBtn, #bestBtn {
+		display:inline-block;
+		margin-left: 3px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.myposts-container {
+		margin-top: 10px;
+	}
+
+}

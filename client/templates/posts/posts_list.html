@@ -1,0 +1,83 @@
+<template name="postsList">
+
+		{{> header}}
+
+	<div class = "container">
+
+		<div class="col-sm-9">
+			<div class="row-fluid">	
+				<div class="main-container">
+
+					<div class="postsList">
+						<ul>
+						<li><a href="{{pathFor 'newPosts'}}" class="btn {{activeRouteClass 'newPosts'}}" id="sortTabNew">New</a></li>
+						<li><a href="{{pathFor 'bestPosts'}}" class="btn {{activeRouteClass 'bestPosts'}}" id="sortTabBest">Best</a></li>
+						</ul>
+					
+						{{#each posts}}
+							{{> postItem}}
+						{{/each}}
+						
+						{{#if nextPath}}
+							<a class="load-more" href="{{nextPath}}">Load more</a>
+						{{else}}
+							{{#unless ready}}
+								{{> spinner}}
+							{{/unless}}
+						{{/if}}
+					</div>
+
+				</div>
+			</div>
+		</div>
+	
+
+	
+		<div class="col-sm-3 aside">
+			<div class="row-fluid">
+			
+			<div class="main-container blog-card">
+			<h4><strong>Blog</strong></h4>
+				<ul>
+					<li>
+						<a href="#">Cool CSS Buttons</a>
+					</li>
+					<li>
+						<a href="#">Jquery Basics</a>
+					</li>
+					<li>
+						<a href="#">Thoughts on javascript</a>
+					</li>
+					<li>
+						<a href="#">Nodejs and Meteorjs</a>
+					</li>
+					<li>
+						<a href="#">PHP a dying language?</a>
+					</li>
+					<li>
+						<a href="#">NoSQL or MySQL? Which one is for you?</a>
+					</li>
+				</ul>
+			</div>
+		
+
+			
+			<div class="main-container solved-card" style="margin-top: 20px">
+			<h4><strong>Developers Needed</strong></h4>
+			<p>Looking for jobs or projects? You can find people who are hiring or willing to work with you on your latest projects.</p>
+			<a href="#">Go find who needs you!</a>
+			</div>
+
+			
+			<div class="main-container  contact-us-card" style="margin-top: 20px;">
+			<h4><strong>Contact Us?</strong></h4>
+			<p>For suggestions, technical issues, or even complaints, please <a href="mailto:sangyoo.91@gmail.com"><strong>contact us</strong></a> directly.</p>
+			</div>
+			
+			</div>
+		</div>
+
+		
+	
+	</div>
+</template>

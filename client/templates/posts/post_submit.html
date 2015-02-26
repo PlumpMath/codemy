@@ -1,0 +1,51 @@
+<template name="postSubmit">
+<div class="container">
+	
+
+	<div class="col-md-12 main-container">
+	<div class="row">
+	<div class="no-gutter">
+	<form class="postSubmit">
+	
+		<div class = "form-group">
+			<button type="submit" class="btn btn-success" style="float:right;">Submit</button>
+			<button type="button" class="btn btn-secondary" style="float:right; margin-right: 10px;">Markdown Cheatsheet</button>
+		       Words: <span id="wordCount">0</span><span id="wordCount1">/500</span><br/>
+		</div>
+		
+		<div class="form-group">
+			<span class="title">TITLE</span>
+				<input name="title" id="title" type="text" value="" placeholder="Untitled Post" class="form-control"/>
+		</div>
+
+			<div class="col-xs-6" id ="markdowncol">
+				<div class="row">
+					<span class="contentSpan">MARKDOWN</span>
+				</div>
+				<div class="row">
+					<div class="colInput" style="background:red;">
+						<textarea id="content" name="content" placeholder="Start typing your question!"></textarea>
+					</div>  
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="row">
+					<span class="contentSpan">MARKDOWN PREVIEW</span>
+				</div>
+				<div class="row">
+					<div class="colPreview" >
+						<div class="parsed">
+						{{#markdown}}{{session 'content'}}{{/markdown}}
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		
+	</form>
+	</div>
+	</div>
+	</div>
+</div>
+</template>

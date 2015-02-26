@@ -1,0 +1,43 @@
+<template name ="sidebar">
+
+<div id="site-menu">
+
+	{{#if currentUser}}
+	<div class = "container-fluid">	
+		<div class="main-container profile-container-side">
+			<div class="userProfileSidebar">
+					<img type="button" class="img-responsive img-circle" src="/img/blank_avatar.png" id="editAvatar">
+					<p>Logged in as..</p>
+					<strong>{{user}}</strong>
+					<p></p>
+			</div>
+		</div>		
+	</div>
+	{{/if}}
+
+	
+	{{#if currentUser}}
+	<ul>
+		<li type="button" id="goto-myPage">
+			<a href="{{pathFor 'myPage'}}"><i class="li_user"></i>  My Page</a>
+		</li>
+
+		<li data-target="#notificationsModal" data-toggle="modal">
+			<a><i class="li_stack"></i>  Notifications</a>
+		</li>
+		<li>
+			<a><i class="li_bubble"></i>  Messages</a>
+		</li>
+	</ul>
+	{{else}}
+	<ul>
+		<li>
+			<a data-target="#signinModal" data-toggle="modal"><i class="li_user"></i>  Sign-In</a>
+		</li>
+	</ul>
+	{{/if}}	
+
+</div> <!--End Site Menu-->
+
+</template>
+

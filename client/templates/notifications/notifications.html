@@ -1,0 +1,49 @@
+<!--NOTIFICATIONS TEMPLATE-->
+<template name="notifications">
+	<div class="modal fade" id="notificationsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	
+	<div class="modal-dialog account">
+		<form>
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel"><i class="li_stack"></i> NOTIFICATIONS</h4>
+				</div>
+
+				<div class="modal-body">
+				{{#if notificationCount}}
+					{{#each notifications}}
+						{{> notificationItem}}
+					{{/each}}
+				{{else}}
+					<h4>No Notifications</h4>
+				{{/if}}
+				</div>
+			
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	</div>
+</template>
+
+
+<!--NOTIFICATION ITEM TEMPLATE-->
+<template name="notificationItem">
+	<li class="eachNotification">
+		<a href="{{notificationPostPath}}">
+		{{#if notificationType 'typeAnswer'}}
+			<h4><strong>{{answererName}}</strong> answered on your post</h4>
+		{{/if}}
+		{{#if notificationType 'typeComment'}}
+		 <h4><strong>{{commenterName}}</strong> commented on your post</h4>
+		 {{/if}}
+		 {{#if notificationType 'typeAnswerComment'}}
+		 <h4><strong>{{commenterName}}</strong> commented on your answer</h4>
+		 {{/if}}
+		</a>
+	</li>
+</template>

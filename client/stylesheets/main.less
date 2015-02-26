@@ -1,0 +1,101 @@
+@import 'globals/variables.less';
+@import 'globals/main-container.less';
+
+@import 'globals/navigation.less';
+@import 'globals/sidebar.less';
+@import 'globals/input.less';
+@import 'globals/postSubmit.less';
+@import 'globals/mypage.less';
+
+@import 'globals/modal.less';
+@import 'globals/button.less';
+
+@import 'globals/chunks.less';
+@import 'globals/overlay.less';
+
+@import 'globals/posts.less';
+@import 'globals/comments.less';
+
+.container {
+//  background: @brand-third;
+}
+
+.backred {
+  background:red;
+}
+
+
+.backblue {
+  background:blue;
+}
+
+
+
+// @media screen and (min-width:480px) and (max-width: 768px){
+//   .container {
+//    width: 80%;
+//   }  
+// }
+
+//Custom no gutter columns
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+
+//GLOBAL IMPORTANT SETTING RULES
+li { cursor: pointer; cursor: hand; }
+
+
+//LOADING CSS
+.loading-message {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.sk-spinner-rotating-plane.sk-spinner {
+  background-color: #fff;
+}
+
+
+
+//BUTTON TRANSITIONS
+button, a, .btn, .navbar-button, li, .searchItem, .postItem {
+  /*Transition global help browser*/
+  -o-transition:.3s;
+  -ms-transition:.3s;
+  -moz-transition:.3s;
+  -webkit-transition:.3s;
+  /* ...and now for the proper property */
+  transition:.3s;
+}
+
+a:hover, li:hover {
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.flip {
+      -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
+     -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.logo{
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+    -webkit-filter: drop-shadow(5px 5px 0px darken(@grayLightest, 30%));
+  
+}

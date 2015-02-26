@@ -1,0 +1,37 @@
+<template name="navbar2">
+
+	 <nav class="navbar-default noselect" role="navigation">
+			
+			<div class="navbar-header pull-left"  style="margin-bottom:0px;">
+				<div class="btn-group">
+					<ul>
+					{{#if currentUser}}
+						<li ><a type="button" href="#" class="navbar-button toggle-nav" id="open-button"><i class="fa fa-bars"></i></a></li>
+					{{/if}}
+						<li><a type="button" href="#" class="navbar-button js-overlay-open" id="hide"><span class="glyphicon glyphicon-search"></span> Search..</a></li>  
+					</ul>
+				</div>
+			</div>
+			
+<!--
+			<div class="navbar-header">
+				Reserve for Center
+			</div>
+-->
+
+			<div class="navbar-header  pull-right" style="margin-bottom:0px;">
+				<div class="btn-group">
+				<!-- {{#if activeRouteClass 'postSubmit'}}
+					<li><a type="submit" href="#" class="navbar-button submitBtn" id="hide">Submit</a></li>
+				{{/if}} -->
+
+				{{#if currentUser}}
+					<li><a type="button" href="#" class="navbar-button signout" id="hide">Sign-out</a></li>
+				{{else}}
+					<li><a type="button" href="#" id="hide" class="navbar-button" data-toggle="modal" data-target="#signinModal"><!-- <i class="fa fa-user"></i> --><i class="li_user"></i></a></li>
+				{{/if}}
+				</div>
+			</div>
+	</nav>
+
+</template>

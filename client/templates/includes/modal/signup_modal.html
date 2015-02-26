@@ -1,0 +1,65 @@
+<template name="signupModal">
+
+
+<!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  
+	<div class="modal-dialog account">
+    <form>
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><i class="li_user"></i> SIGN-UP</h4>
+      </div>
+      <div class="modal-body">
+
+        <span class="input input--jiro">
+          <input class="input__field input__field--jiro" type="text" name="signupUser" id="input-1" />
+           <label class="input__label input__label--jiro" for="input-1">
+           	<span class="input__label-content input__label-content--jiro">Username</span>
+        	</label>
+      	</span>
+
+        <span class="input input--jiro">
+          <input class="input__field input__field--jiro" type="email" name="signupEmail" id="input-1" />
+           <label class="input__label input__label--jiro" for="input-1">
+           	<span class="input__label-content input__label-content--jiro">E-mail Address</span>
+          </label>
+       	</span>
+
+       	 <span class="input input--jiro">
+          <input class="input__field input__field--jiro" type="email" name="confEmail" id="input-1" />
+           <label class="input__label input__label--jiro" for="input-1">
+           	<span class="input__label-content input__label-content--jiro">Confirm E-mail Address</span>
+          </label>
+       	</span>
+
+        <span class="input input--haruki">
+          <input class="input__field input__field--jiro" type="password" name="signupPassword" id="input-1" />
+          <label class="input__label input__label--jiro" for="input-1">
+            <span class="input__label-content input__label-content--jiro">Password</span>
+          </label>
+       	</span>
+
+      	<span class="input input--haruki">
+          <input class="input__field input__field--jiro" type="password" name="confPass" id="input-1" />
+          <label class="input__label input__label--jiro" for="input-1">
+            <span class="input__label-content input__label-content--jiro">Confirm Password</span>
+          </label>
+       	</span>
+
+        <p></p>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success" id="submitForm">Sign-up</button>
+      </div>
+    </div>
+    </form>
+  </div>
+  
+</div>
+
+</template>

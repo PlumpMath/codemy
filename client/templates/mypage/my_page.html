@@ -1,0 +1,104 @@
+<template name = "myPage">
+
+	<div class="container">
+
+		<div class="row">
+		
+			<div class="col-sm-6">
+				
+				<div class="main-container profile-container mypage-container">
+					<div class="userProfile">
+						<div class="row">
+							<div class="col-xs-12 col-sm-4">
+								<img type="button" class="img-responsive img-circle img-avatar-main" src="/img/blank_avatar.png" id="editAvatar">
+							</div>
+							
+							<div class="col-xs-12 col-sm-8">
+								<h3><strong>{{user}}</strong></h3>
+								<p class="myinfo">
+									{{userInfo}}
+								</p>
+								<button id = "btnInfoModal" data-target="#infoModal" data-toggle="modal" class = "btn btn-secondary">Change Info</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="main-container mypage-container" style="margin-top: 20px;">
+					
+					<h3 class ="myposts"><i class="li_stack"></i> Notifications</h3>
+					
+					<div class = "row">
+					<div class="col-sm-12">
+						{{#if notificationCount}}
+							{{#each notifications}}
+								{{> notificationItem}}
+							{{/each}}
+						{{else}}
+							<h4>No Notifications</h4>
+						{{/if}}
+					</div>
+					</div>
+					
+				</div>
+
+			</div>
+
+			<div class="col-sm-6">
+				<div class="main-container myposts-container">
+					
+					<h3 class ="myposts"><i class="li_note"></i> My Posts</h3><button type="button" id="newBtn" class="btn btn-xs btn-secondary">New</button><button type="button" id="bestBtn" class="btn btn-xs btn-secondary">Best</button>
+					
+					<div class = "row">
+					<div class="col-md-12">
+					{{#each myposts}}
+						{{> postItem}}
+					{{/each}}
+						<h4 class="nomoreposts">{{nomore}}</h4>
+					</div>
+					</div>
+					<nav>
+						<ul class="pager">
+							<li class="previous"><a href="#">Previous</a></li>
+							<li class="next" id="next"><a href="#">Next</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!--Modal-->
+	<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	
+	<div class="modal-dialog account">
+		<form>
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel"><i class="li_user"></i> Update Info</h4>
+				</div>
+
+				<div class="modal-body">
+					<form id="infoForm">
+					<div class="pull-left">
+					Words: <span id="wordCount">{{wordcount}}</span><span id="wordCount1">/30</span><br/>
+					</div>
+						<textarea id="user_info" name="user_info">{{userInfo}}</textarea>
+					</form>
+				</div>
+			
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-secondary" id="btnUploadInfo">Upload Info</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	</div>
+
+</template>

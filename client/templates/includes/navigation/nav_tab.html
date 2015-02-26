@@ -1,0 +1,17 @@
+<template name="navTab">
+
+	<ul id ="nav-tabs">
+		<li><a type="button" id="go-to-home"><!-- <i class="fa fa-home"></i> --><i class="li_shop"></i></a></li>
+		
+		{{#if currentUser}}
+			{{#if activeRouteClass 'postSubmit'}}	
+				<li><a type="button" id="go-to-submit" class="active"><!-- <i class="fa fa-pencil"></i> --><i class="li_pen"></i></a></li>
+			{{else}}
+				<li><a type="button" id="go-to-submit"><!-- <i class="fa fa-pencil"></i> --><i class="li_pen"></i></a></li>
+			{{/if}}
+		{{/if}}
+
+		<li><a type="button" id="return-to-top"><i class="fa fa-chevron-up"></i></a></li>
+	</ul>
+
+</template>

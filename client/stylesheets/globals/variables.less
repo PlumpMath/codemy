@@ -1,0 +1,114 @@
+// @brand-primary : #393276;
+// // @brand-secondary: #b4bad2;
+// @brand-secondary: lighten(#b4bad2, 70%);
+// @brand-light: #fffce1;
+// @brand-light-hover: #c94e50;
+// @brand-dark: #373a47;
+// @brand-darkest: darken(@brand-dark, 10%);
+// @brand-text: #4e4a46;
+
+
+@brand-primary : #2C3E50;
+@brand-primary: #384047;
+@brand-secondary: #65737F;
+@brand-third: #8D9AA4;
+@brand-success: #18BC9C;
+@brand-light: #fffce1;
+@brand-light-hover: #c94e50;
+@brand-dark: #373a47;
+@brand-darkest: darken(@brand-dark, 10%);
+@brand-text: #4e4a46;
+@brand-warning: #F55540;
+
+//Whites and Grays
+@white: #fff;
+@gray: #ddd;
+@gray-light: #f7f7f7;
+@gray-dark: #222;
+
+//Blue Tone
+@baseColor: #18BC9C;
+
+// Shades
+@difference: 10%; // Difference (in perecent) between each shade
+@shade1: lighten(@baseColor, (@difference * 2));
+@shade2: lighten(@baseColor, @difference);
+@shade3: @baseColor;
+@shade4: darken(@baseColor, @difference);
+@shade5: darken(@baseColor, (@difference * 2));
+
+
+// Grays
+@white:             #fff;
+@grayWhite: #F8F8F8;
+@grayLightest:  #EDEFF0;
+@grayLighter:       #ccc;
+@grayLight:         #777;
+@graySecondary: #F9FAFA;
+@gray:              #555;
+@grayDark:          #333;
+@black:             #000;
+
+// Accent Colors
+@blue:              #08b5fb;
+@green:             #46a546;
+@red:               #9d261d;
+@yellow:            #ffc40d;
+@orange:            #f89406;
+@pink:              #c3325f;
+@purple:            #7a43b6;
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+.smallcaps {
+	font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+/*    -moz-binding: url('assets/xml/ellipsis.xml#ellipsis');*/
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+
+// ........................................................
+
+@import "https://raw.githubusercontent.com/seven-phases-max/less.curious/master/src/for";
+
+.long-shadow(@type, @size, @color, @depth: 10%, @fade: 0%) {
+    .for(@size); .-each(@i) {
+        @x: 1px * @i;
+        @y: 1px * @i;
+        @a: pow(1 - (@i - 1) / @size, .02 * @fade);
+        @c: darken(@color, @depth * @a);
+        @{type}-shadow+: @x @y @c;
+    }
+}

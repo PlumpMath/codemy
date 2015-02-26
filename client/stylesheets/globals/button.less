@@ -1,0 +1,55 @@
+@import 'variables.less';
+
+.btn {
+	//text-transform: uppercase;
+	.border-radius;
+
+}
+
+.btn-primary {
+	background: @brand-primary;
+	border:none;
+	//font-weight:600;
+	&:hover {
+		background: darken(@brand-primary, 10%);
+	}
+	&:active,
+	&.active {
+		background: @brand-primary;
+	}
+	overflow: hidden;
+
+}
+
+.btn-secondary {
+	background: @brand-secondary;
+	border:none;
+	color: @white;
+	&:hover {
+		color:@white;
+		background: darken(@brand-secondary, 10%);
+	}
+	&:active,
+	&.active {
+		background: @brand-secondary;
+	}
+}
+
+
+.btn-success {
+	background: @brand-success;
+	border:none;
+	font-weight:600;
+	//.long-shadow(text, 40, @brand-success, @fade: 90%);
+
+	&:hover {
+		background: darken(@brand-success, 10%);
+	}
+	overflow: hidden;   
+}
+
+.btn-social.btn-facebook {
+	border:none;
+	font-weight: 600;
+}
+

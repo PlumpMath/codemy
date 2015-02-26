@@ -1,0 +1,26 @@
+<template name="layout">
+{{>notifications}}
+{{> errors}}
+{{> alerts}}
+{{> signinModal}}
+{{> signupModal}}
+{{> navTab}}
+{{> overlay}}
+
+<div id="site-wrapper">
+	{{> navbar2}}
+<div id="site-canvas">
+	
+	{{> sidebar}}
+	<div class="page">
+	<div class="overlay-black">
+	</div>
+	{{#momentum plugin='iron-router' options=transition}}
+  		{{> yield}}
+	{{/momentum}}
+	
+	</div>
+</div>
+
+</div>
+</template>

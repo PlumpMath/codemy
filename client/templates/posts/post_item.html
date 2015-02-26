@@ -1,0 +1,32 @@
+<template name="postItem">
+	<div class="postItem">
+		<div class="row">
+			<!-- <div class="col-xs-1">
+				<img class="img-circle" style="max-width: 30px; margin-top: 25px; " src="img/blank_avatar.png">
+			</div> -->
+			<div class="col-xs-10">
+				<h3 id="linkToPost"><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
+				<p>
+					 <span class="metadata"><span><strong>{{author}}</strong></span>  {{pluralize votes "Vote"}},
+					<a href="{{pathFor 'postPage'}}"></a>
+					{{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}</span> 
+				</p>
+			</div>
+			
+			<div class="col-xs-2">
+				<span class="answersCount">{{answersCount}}<br/><span>Answers</span></span>
+			</div>
+			<!-- {{#if currentUser}}
+			<a href="#" class="downvote btn {{downvotedClass}}"><i class="fa fa-chevron-down"></i></a>
+			<a href="#" class="upvote btn {{upvotedClass}}"><i class="fa fa-chevron-up"></i></a>
+			{{else}}
+			<a href="#" class="downvote btn" disabled><i class="fa fa-chevron-down"></i></a>
+			<a href="#" class="upvote btn" disabled><i class="fa fa-chevron-up"></i></a>
+			{{/if}}    --> 
+		</div>
+	</div>
+		
+	
+</template>
+
+<!-- {{pluralize commentsCount "comment"}} -->

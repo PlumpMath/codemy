@@ -1,0 +1,142 @@
+@import 'variables.less';
+
+//Container (white rounded)
+.main-container {
+	padding: 30px;
+	background: @white; 
+	padding-top:20px; 
+	padding-bottom:20px;
+	color:@brand-secondary;
+	.border-radius;
+}
+
+ @media screen and (min-width: 480px) and (max-width: 992px){
+	.aside {
+	 	max-width: 100%;
+	 }
+	 .main-container {
+	 	padding: 20px;
+	 }
+}
+
+ @media screen and (max-width: 768px){
+	.aside {
+	 	max-width: 100%;
+	 	margin-top: 20px;
+	 }
+	 .main-container {
+	 	padding: 20px;
+	 }
+}
+
+
+
+.main-container.profile-card {
+
+	border-top: 3px solid @brand-success;
+	border-bottom: 3px solid @grayLighter;
+
+	.profile-aside {		
+		text-align: center;
+		
+		img {
+			margin: 0 auto; //center image
+			margin-bottom: 10px;
+			border: 3px solid @grayLightest;
+		}
+
+		strong {
+			font-weight:800;
+			font-size: 1.5em;
+			line-height: 1.0em;
+		}
+	}
+}
+
+.main-container.contact-us-card {
+	border-top: 3px solid @red;
+	border-bottom: 3px solid @grayLighter;
+	margin-bottom: 10px;
+}
+
+.main-container.blog-card {
+	border-top: 3px solid @blue;
+	border-bottom: 3px solid @grayLighter;
+	margin-bottom: 10px;
+	ul {
+		list-style: none;
+		padding: 0px;
+		li {
+			.ellipsis;
+			padding: 0px;
+			margin: 0px;
+			a{
+
+			}
+		}
+	}
+}
+
+.main-container.solved-card {
+	border-top: 3px solid @green;
+	border-bottom: 3px solid @grayLighter;
+}
+
+
+.main-container#loginWarning { 
+	background: @graySecondary;
+	border-bottom: 1px solid @grayLighter;
+}
+
+
+
+
+//SiIde Bar Main-Container
+
+.main-container.profile-container-side {
+
+	border-top: 3px solid @brand-success;
+	border-bottom: 3px solid @grayLighter;
+	margin-top: -20px;
+
+	.userProfileSidebar {
+		
+		text-align: center;
+		
+		img {
+			margin: 0 auto; //center image
+			margin-bottom: 10px;
+			border: 3px solid @grayLightest;
+		}
+
+		strong {
+			font-weight:800;
+			font-size: 1.5em;
+			line-height: 1.0em;
+		}
+	}
+
+	.userProfile {
+	
+	overflow: hidden;
+	text-align: left;
+	
+
+		img {
+			margin: 0 auto; //center image
+			margin-bottom: 10px;
+			border: 3px solid @grayLightest;
+		}
+
+		strong {
+			font-weight:800;
+			font-size: 1.5em;
+			line-height: 1.0em;
+		}
+		p {
+			width: 100%;
+			//word-break: break-word;
+			max-height: 200px;
+		}
+	}
+}
