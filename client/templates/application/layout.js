@@ -13,9 +13,9 @@ Meteor.startup(function(){
 
 Template.layout.helpers({
 
-	transition: function() { return function(from, to, element) {
-  return 'left-to-right';
-} }
+transition: function() { return function(from, to, element) {
+	return 'left-to-right';
+}}
 
 })
 
@@ -24,6 +24,7 @@ Template.layout.events({
 	'click .signout': function(){
 		if (confirm("Are you sure you want to sign-out?")) {
 			Meteor.logout(function() {	
+				Router.go('/new');
 			});
 
 			var currentUser = Meteor.user().username || Meteor.user().profile.name;

@@ -1,134 +1,164 @@
 @import 'variables.less';
 
 .overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: @graySecondary;
-    //opacity: 0.9;
-    background: rgba(249, 250, 250, 0.8);
-    z-index:10;
-    overflow-y: scroll;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: @graySecondary;
+	//opacity: 0.9;
+	background: rgba(249, 250, 250, 0.8);
+	z-index:10;
+	overflow-y: scroll;
 
-    .jumbotron {
-        background: none;
-        .search {
-        
-    		p {
-    			text-align: center;
+	.jumbotron {
+		background: none;
+		.search {
+		
+			p {
+				text-align: center;
 
-    			i {
-    				font-size: 2em;
-    				margin-right: 10px;
-    			}
+				i {
+					font-size: 2em;
+					margin-right: 10px;
+				}
 
-    			input[type=text]{
-    			
- 				width:80%;
-    			outline:none;
-    			border: none;
-    			//border-bottom: 1px solid @grayLighter;
-    			background: none;
-    			//text-align: center;
-    			font-size: 2em;
-    			text-align: center;
-    			}
-    			input[type=text].focus,
-    			input[type=text]:focus {
-    			outline:none;
-    			}
-    		}//End p
-    	}//End .search
-    }//End .jumbotron
-    .searchList {
-        margin: 0px;
-        padding: 20px;
-        padding-right:40px;
-        //background: red;        
-    }
-    .searchItem{
-        background: @white;
-        .border-radius;
-        border: 1px solid @grayLightest;
-        padding: 10px;
-        width: 100%;
-        height:150px;
-        margin: 10px;
-        h3 {
-            margin: 0px;
+				input[type=text]{
+				
+				width:80%;
+				outline:none;
+				border: none;
+				//border-bottom: 1px solid @grayLighter;
+				background: none;
+				//text-align: center;
+				font-size: 2em;
+				text-align: center;
+				}
+				input[type=text].focus,
+				input[type=text]:focus {
+				outline:none;
+				}
+			}//End p
+		}//End .search
+	}//End .jumbotron
 
-        }
-        a {
-            font-size: 0.8em;
+	//Reposition to prevent collision with X close button in mobile
+	@media screen and (max-width:768px) {
+		.jumbotron {
+			margin-top: 30px;
+		}
+	} 
+	
+	.searchList {
+		margin: 0px;
+		padding: 20px;
+		padding-right:40px;
+		//background: red;        
+	}
+	.searchItem{
+		background: @white;
+		.border-radius;
+		border: 1px solid @grayLightest;
+		padding: 10px;
+		width: 100%;
+		height:150px;
+		margin: 10px;
+		h3 {
+			margin: 0px;
 
-        }
-    }
-    .searchItem:hover {
-        background: @grayWhite;
-        border: 1px solid @grayLighter;
-    }
+		}
+		a {
+			font-size: 0.8em;
+
+		}
+	}
+	.searchItem:hover {
+		background: @grayWhite;
+		border: 1px solid @grayLighter;
+	}
 }//End .overlay
 
  #loadmore {
-    padding:0px 30px 0px 30px;
-    margin: 0 auto;
-    margin-left : 20px;
-    .btn {
-        margin: 0 auto;
-    }
+	padding:0px 30px 0px 30px;
+	margin: 0 auto;
+	margin-left : 20px;
+	.btn {
+		margin: 0 auto;
+	}
 
-    button {
-        color:@brand-secondary;
-        background: @grayLightest;
-        border: none;
-        .border-radius;
-        padding: 10px;
-        margin: 0 auto;
-        border-top: 1px solid @grayLightest;
-        border-bottom: 1px solid @grayLighter;
-        &:hover {
-            background: @grayLightest;
-        }
-    }
+	button {
+		color:@brand-secondary;
+		background: @grayLightest;
+		border: none;
+		.border-radius;
+		padding: 10px;
+		margin: 0 auto;
+		border-top: 1px solid @grayLightest;
+		border-bottom: 1px solid @grayLighter;
+		&:hover {
+			background: @grayLightest;
+		}
+	}
  }
 
 .overlay .overlay-close1 {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    overflow: hidden;
-    border: none;
-    outline: none;
-    z-index: 100;
-    cursor: pointer;
-    font-size: 30px;
-    color: @brand-primary;
-    text-align: center;
-    &:hover{
-        text-decoration: none;
-        color:@brand-secondary;
-    }
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	overflow: hidden;
+	border: none;
+	outline: none;
+	z-index: 100;
+	cursor: pointer;
+	font-size: 30px;
+	color: @brand-primary;
+	text-align: center;
+	&:hover{
+		text-decoration: none;
+		color:@brand-secondary;
+	}
+}
+
+.exitLabel {
+	position: absolute;
+	right: 15px;
+	top: 58px;
+	font-size: 12px;
+	color: @brand-third;
+	font-weight: bolder;
+
+	.noselect;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+@media screen and (max-width: 768px) {
+	.overlay .overlay-close1 {
+	font-size: 20px;
+	}
+	.exitLabel {
+		top: 43px;
+		right: 16px;
+		font-size: 8px;
+	}
+}
+
+@media screen and (max-width: 340px) {
+	.overlay .overlay-close1 {
+	font-size: 20px;
+	}
+	.exitLabel {
+		display:none;
+	}
 }
 
 // HIDE INITIAL PLUGIN CLOSE
 .overlay .overlay-close {
-    display:none;
+	display:none;
 }
 
-.exitLabel {
-    position: absolute;
-    right: 15px;
-    top: 58px;
-    font-size: 12px;
-    color: @brand-third;
-    font-weight: bolder;
 
-    .noselect;
-    cursor: pointer; 
-    cursor: hand;
-}
 
 .no-results {
 	font-size: 2em;
@@ -137,8 +167,8 @@
 
 //ES pagination
 .es-pagination {
-    background: none;
-    li.selected {
-        background: none;
-    }
+	background: none;
+	li.selected {
+		background: none;
+	}
 }
