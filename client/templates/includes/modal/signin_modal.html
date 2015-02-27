@@ -5,7 +5,7 @@
 <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	
 	<div class="modal-dialog account">
-		<form>
+		<form> <!--Wrap modal-content with Form for ease of use -->
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -15,45 +15,55 @@
 			<div class="modal-body">
 			<div class="row">
 
-			<div class="col-md-5" id="socialBlock">
-				<div class="container-fluid">
-				<a class="btn btn-social btn-facebook" id="facebook-login">
-					<i class="fa fa-facebook"></i>
-					Sign in with Facebook
-				</a>
-				</div>
-			</div>
-
-			<div class="col-md-7">
-				<div class="row">
-				<span class="input input--jiro">
-					<input class="input__field input__field--jiro" type="text" name="signinUser" id="input-1" />
-					 <label class="input__label input__label--jiro" for="input-1">
-						<span class="input__label-content input__label-content--jiro">Username or E-mail</span>
-					</label>
-			 	</span>
-
-
-				<span class="input input--haruki">
-					<input class="input__field input__field--jiro" type="password" name="signinPassword" id="input-1" />
-					<label class="input__label input__label--jiro" for="input-1">
-						<span class="input__label-content input__label-content--jiro">Password</span>
-					</label>
-			 	</span>
-			 	</div>
 			
+
+			<div class="col-md-12">
+
+				<div class="row"> <!--Row to group input fields-->
+					<span class="input input--jiro"> <!--Refer to tympanus(codrops) input field -->
+						<input class="input__field input__field--jiro" type="text" name="signinUser" id="input-1" />
+						 <label class="input__label input__label--jiro" for="input-1">
+							<span class="input__label-content input__label-content--jiro">Username or E-mail</span>
+						</label>
+				 	</span>
+
+
+					<span class="input input--haruki">
+						<input class="input__field input__field--jiro" type="password" name="signinPassword" id="input-1" />
+						<label class="input__label input__label--jiro" for="input-1">
+							<span class="input__label-content input__label-content--jiro">Password</span>
+						</label>
+				 	</span>
+			 	</div> <!-- End Row-->
+				
+			 	<div class="row">
+			 		<button type="submit" class="btn btn-success btn-signin">Sign-In!</button>
+			 	</div> <!--End row for sign in button-->
+
 				<div class="row">
-				<a href="" class="" data-toggle="modal" data-target="#signupModal">Sign Up Now</a>
-				</div>
-			</div> 
+					<p>Don't have an account? <a href="" class="" data-toggle="modal" data-target="#signupModal">Register Now</a></p>
+				</div> <!--End signup redirect Row-->
+			</div>  <!--End Col-md-12 For Top section of Signin Modal-->
+
 			
-			</div> <!--ROW END-->
-			</div> <!--MODAL BODY END-->
+			</div> <!--End ROW END-->
+			</div> <!--End BODY END-->
 			
 			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-				<button type="submit" class="btn btn-success">Sign-In</button>
-			</div>
+				<div id="socialBlock">
+					<div class="row-fluid">
+						<a class="btn btn-social btn-facebook" id="facebook-login">
+						<i class="fa fa-facebook"></i>
+						Sign in with Facebook
+						</a>
+						<a class="btn btn-social btn-google-plus" id="google-plus-login">
+						<i class="fa fa-google-plus"></i>
+						Sign in with Google+
+						</a>
+					</div>
+				</div> <!--End Social Login #socialBlock-->
+			</div><!--End MODAL FOOTER-->
+
 		</div>
 		</form>
 	</div>

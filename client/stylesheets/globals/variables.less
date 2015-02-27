@@ -1,41 +1,18 @@
-// @brand-primary : #393276;
-// // @brand-secondary: #b4bad2;
-// @brand-secondary: lighten(#b4bad2, 70%);
-// @brand-light: #fffce1;
-// @brand-light-hover: #c94e50;
-// @brand-dark: #373a47;
-// @brand-darkest: darken(@brand-dark, 10%);
-// @brand-text: #4e4a46;
-
-
-@brand-primary : #2C3E50;
-@brand-primary: #384047;
-@brand-secondary: #65737F;
-@brand-third: #8D9AA4;
+//Primary Brand Colors
+@brand-primary: #384047; //Dark Text/Blocks color
+@brand-secondary: #65737F; //Global Text color
+@brand-third: #8D9AA4; //Lightest Text color
 @brand-success: #18BC9C;
-@brand-light: #fffce1;
-@brand-light-hover: #c94e50;
-@brand-dark: #373a47;
-@brand-darkest: darken(@brand-dark, 10%);
-@brand-text: #4e4a46;
 @brand-warning: #F55540;
 
-//Whites and Grays
-@white: #fff;
-@gray: #ddd;
-@gray-light: #f7f7f7;
-@gray-dark: #222;
-
-//Blue Tone
-@baseColor: #18BC9C;
-
-// Shades
-@difference: 10%; // Difference (in perecent) between each shade
-@shade1: lighten(@baseColor, (@difference * 2));
-@shade2: lighten(@baseColor, @difference);
-@shade3: @baseColor;
-@shade4: darken(@baseColor, @difference);
-@shade5: darken(@baseColor, (@difference * 2));
+//Use for later
+// // Shades
+// @difference: 10%; // Difference (in perecent) between each shade
+// @shade1: lighten(@baseColor, (@difference * 2));
+// @shade2: lighten(@baseColor, @difference);
+// @shade3: @baseColor;
+// @shade4: darken(@baseColor, @difference);
+// @shade5: darken(@baseColor, (@difference * 2));
 
 
 // Grays
@@ -44,7 +21,7 @@
 @grayLightest:  #EDEFF0;
 @grayLighter:       #ccc;
 @grayLight:         #777;
-@graySecondary: #F9FAFA;
+@graySecondary: #F9FAFA; //Used for footer of containers
 @gray:              #555;
 @grayDark:          #333;
 @black:             #000;
@@ -93,22 +70,3 @@
 /*    -moz-binding: url('assets/xml/ellipsis.xml#ellipsis');*/
 }
 
-.line-clamp {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
-}
-
-// ........................................................
-
-@import "https://raw.githubusercontent.com/seven-phases-max/less.curious/master/src/for";
-
-.long-shadow(@type, @size, @color, @depth: 10%, @fade: 0%) {
-    .for(@size); .-each(@i) {
-        @x: 1px * @i;
-        @y: 1px * @i;
-        @a: pow(1 - (@i - 1) / @size, .02 * @fade);
-        @c: darken(@color, @depth * @a);
-        @{type}-shadow+: @x @y @c;
-    }
-}

@@ -39,17 +39,31 @@
 .btn-success {
 	background: @brand-success;
 	border:none;
-	font-weight:600;
-	//.long-shadow(text, 40, @brand-success, @fade: 90%);
-
+	
 	&:hover {
 		background: darken(@brand-success, 10%);
 	}
 	overflow: hidden;   
 }
 
-.btn-social.btn-facebook {
+.btn-social {
 	border:none;
-	font-weight: 600;
+	width: 200px;
 }
 
+@media screen and (max-width: 768px) {
+
+	.btn-google-plus {
+		margin-top: 10px !important; 
+	}
+
+}
+
+.btn-signin {
+	border-radius: 20px;
+	width: ~"calc(100% - 2em)";
+	max-width: 400px;
+	height: 40px;
+	font-size: 1.3em;
+	font-weight: 600;
+}

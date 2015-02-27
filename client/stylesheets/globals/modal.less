@@ -9,7 +9,7 @@
 
 .modal-dialog.account,
 .modal-dialog {
-	max-width:600px;
+	max-width:500px;
 	height:400px;
 	
 	//Centering Modal (position:50%, margin of Position= -width/2)
@@ -37,14 +37,14 @@
 				font-size: 2.2em;
 			}
 			.close{ 
-				display:none; //DELETE THIS ROW TO UNHIDE!!!
-				color:@brand-light; 
+				//display:none; //DELETE THIS ROW TO UNHIDE!!!
+				color:@brand-third; 
 				opacity:1; 
 				text-shadow:none; 
 				position:absolute;
 				right: 20px;
 			}
-			.close:hover{color:@brand-light-hover;}
+			//.close:hover{color:@brand-warning;}
 		}
 
 		.modal-body{
@@ -52,24 +52,19 @@
 			//border:none;
 			text-align: center;
 
-			#socialBlock{
-				margin-top: -15px; //compensate white space 
-				margin-bottom: -15px;
-				padding-top: 15px; //Gutter from compensation
-				height: 75px;
-				//background:@graySecondary;
-			}
+			
 
 			p {
+				margin-top: 30px;
 				text-transform: uppercase;
 				font-weight: bold;
-				color:@brand-light;
+				color:@brand-third;
 			}
 			p a {
-				color:@brand-light
+				//color:@brand-third;
 			}
 			p a:hover {
-				color:@brand-light-hover;
+				//color:@brand-success;
 				text-decoration: none;
 			}
 			textarea#user_info {
@@ -85,8 +80,12 @@
 		}
 
 		.modal-footer{
-			///background:@brand-primary;
-			border:none;
+			background:@graySecondary;
+			border-radius: 10px;
+			border-top-right-radius: 0px;
+			border-top-left-radius: 0px;
+			//border:none;
+			text-align: center;
 		}
 
 	}
@@ -101,7 +100,13 @@
       //now you must set a margin left under zero - value is a half width your window
       margin-left: -175px !important;
       // this same situation is with height - example
-
+    }
+    .modal-footer {
+    	text-align: center;
+    	a {
+    		margin-left: 0px !important;
+    		margin-right: 0px !important;
+    	}
     }
  }
 
